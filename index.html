@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Field Mirror with Button</title>
+</head>
+<body>
+    <input type="text" id="input1" placeholder="Type here"> <br><br>
+    <input type="text" id="input2" placeholder="Mirrored data will appear here" > <br><br>
+    <button id="transferButton">Submit</button>
+    
+    <script>
+        const input1 = document.getElementById("input1");
+        const input2 = document.getElementById("input2");
+        const transferButton = document.getElementById("transferButton");
+
+        transferButton.addEventListener("click", function() {
+            input2.value = input1.value;
+            input1.value = ""; // Clear the first input field
+        });
+    </script>
+</body>
+</html>
